@@ -1,0 +1,39 @@
+/* Importing the font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Customizing base styles using Tailwind's layering system */
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-900 font-sans;
+    font-family: 'Public Sans', sans-serif; /* Apply imported font */
+    color: #333; /* Improve contrast against light background */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold; /* Headings are bold by default */
+  }
+
+  p {
+    @apply mb-4; /* Margin for spacing between paragraphs */
+  }
+
+  a {
+    @apply text-blue-600 hover:text-blue-800; /* Ensure links stand out with a hover state */
+  }
+
+  button {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500; /* Focus styling for buttons */
+  }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  body {
+    @apply text-lg; /* Slightly larger text for better readability on tablets and larger devices */
+  }
+}
