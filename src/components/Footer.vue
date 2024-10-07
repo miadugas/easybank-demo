@@ -1,12 +1,23 @@
 <template>
   <footer class="bg-[#2d314d] text-white py-12 px-8">
     <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start">
-      <div class="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-12 items-center lg:items-start">
+      <div
+        class="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-12 items-center lg:items-start"
+      >
         <div class="flex flex-col items-center lg:items-start space-y-8">
-          <img class="w-[139px] h-[20px]" src="../assets/logo_white.svg" alt="Easybank" />
+          <router-link to="/" class="flex-shrink-0">
+              <img class="w-[139px] h-[20px]" src="../assets/logo.svg" alt="Easybank" />
+            </router-link>
           <div class="flex space-x-4">
             <div class="flex space-x-6">
-              <a v-for="item in navigation.social" :key="item.name" :href="item.href" class="text-white hover:text-[#30C88F]">
+              <a
+                v-for="item in navigation.social"
+                :key="item.name"
+                :href="item.href"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white hover:text-[#30C88F]"
+              >
                 <span class="sr-only">{{ item.name }}</span>
                 <component :is="item.icon" class="h-[24px] w-[24px]" aria-hidden="true" />
               </a>
@@ -14,13 +25,17 @@
           </div>
         </div>
         <nav class="flex flex-wrap justify-center lg:justify-start">
-          <ul class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-x-16 lg:gap-y-4 text-center lg:text-left">
-            <li><a href="javascript:window.location.reload(true)" class="text-white hover:text-[#30C88F]">About Us</a></li>
-            <li><a href="javascript:window.location.reload(true)" class="text-white hover:text-[#30C88F] text-[15px]">Contact</a></li>
-            <li><a href="javascript:window.location.reload(true)" class="text-white hover:text-[#30C88F] text-[15px]">Blog</a></li>
-            <li><a href="javascript:window.location.reload(true)" class="text-white hover:text-[#30C88F] text-[15px]">Careers</a></li>
-            <li><a href="javascript:window.location.reload(true)" class="text-white hover:text-[#30C88F] text-[15px]">Support</a></li>
-            <li><a href="javascript:window.location.reload(true)" class="text-white hover:text-[#30C88F] text-[15px]">Privacy Policy</a></li>
+          <ul
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-x-16 lg:gap-y-4 text-center lg:text-left"
+          >
+            <li v-for="link in navigationLinks" :key="link.name">
+              <router-link
+                :to="link.to"
+                class="text-white hover:text-[#30C88F] text-[15px]"
+              >
+                {{ link.name }}
+              </router-link>
+            </li>
           </ul>
         </nav>
       </div>
@@ -32,9 +47,11 @@
   </footer>
 </template>
 
+
 <script setup lang="ts">
 import { defineComponent, h } from 'vue'
 import RequestInviteButton from './RequestInviteButton.vue';
+import { RouterLink } from 'vue-router';
 
 const navigation = {
   social: [
@@ -106,4 +123,13 @@ const navigation = {
     },
   ],
 }
+
+const navigationLinks = [
+  { name: 'About Us', to: '/about' },
+  { name: 'Contact', to: '/contact' },
+  { name: 'Blog', to: '/blog' },
+  { name: 'Careers', to: '/careers' },
+  { name: 'Support', to: '/support' },
+  { name: 'Privacy Policy', to: '/privacy-policy' },
+];
 </script>

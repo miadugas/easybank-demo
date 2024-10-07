@@ -5,7 +5,9 @@
         <div class="flex h-16 items-center justify-between">
           <div class="flex items-center">
             <div class="flex-shrink-0">
+              <router-link to="/" class="flex-shrink-0">
               <img class="w-[139px] h-[20px]" src="../assets/logo.svg" alt="Easybank" />
+            </router-link>
             </div>
           </div>
           <div class="hidden sm:flex sm:space-x-4 sm:items-center sm:justify-center flex-grow text-[#9597A5]">
@@ -48,6 +50,14 @@
               @click="setActive('careers')"
             >
             Careers
+            </router-link>
+            <router-link
+              to="/support"
+              class="inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium text-[#9597A5] hover:text-[#2D314D]"
+              :class="{ 'border-[#33D35E] text-[#2D314D]': isActive('support'), 'border-transparent': !isActive('support') }"
+              @click="setActive('support')"
+            >
+            Support
             </router-link>
 
           </div>
@@ -105,6 +115,14 @@
             @click="setActive('careers')"
           >
             Careers
+          </router-link>
+          <router-link
+            to="/support"
+            class="block w-full text-center rounded-md px-3 py-2 text-base font-medium hover:bg-[#2D314D] hover:text-white"
+            :class="{ 'bg-[#2D314D] text-white': isActive('support'), 'text-[#2D314D]': !isActive('support') }"
+            @click="setActive('support')"
+          >
+            Support
           </router-link>
 
         </div>

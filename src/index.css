@@ -23,7 +23,7 @@
   }
 
   a {
-    @apply text-blue-600 hover:text-blue-800; /* Ensure links stand out with a hover state */
+    @apply text-green-600 hover:text-green-800; /* Ensure links stand out with a hover state */
   }
 
   button {
@@ -37,3 +37,12 @@
     @apply text-lg; /* Slightly larger text for better readability on tablets and larger devices */
   }
 }
+
+.sanity-content h1 { margin: 2rem 0 1rem; font-size: 2.5rem; font-weight: bold; }
+.sanity-content h2 { margin: 2rem 0 1rem; font-size: 2rem; font-weight: bold; }
+.sanity-content h3 { margin: 1.5rem 0 0.75rem; font-size: 1.75rem; font-weight: bold; }
+.sanity-content h4 { margin: 1rem 0 0.5rem; font-size: 1.5rem; font-weight: bold; }
+.sanity-content p { margin-bottom: 1rem; }
+.sanity-content ul, .sanity-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+.sanity-content li { margin-bottom: 0.25rem; }
+.sanity-content blockquote { border-left: 4px solid #718096; padding-left: 1rem; margin: 1rem 0; }
