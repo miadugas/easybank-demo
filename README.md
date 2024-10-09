@@ -1,6 +1,6 @@
 # easybank-demo
 
-This template should help get you started developing with Vue 3 in Vite.
+The EasyBank Demo is a modern, responsive banking website showcasing financial services with a clean user interface. Built with Vue 3 and TypeScript, and Tailwind CSS for efficient styling. The site provides a potential user experience for a new digital banking platform. Its purpose is to provide a proof of concept for a sleek and intuitive financial service interface suitable for modern users. Includes a fully functioning blog platform, privacy policy and careers section.
 
 ## Recommended IDE Setup
 
