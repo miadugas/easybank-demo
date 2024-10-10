@@ -1,6 +1,6 @@
 # easybank-demo
 
-The EasyBank Demo is a modern, responsive banking website showcasing financial services with a clean user interface. Built with Vue 3 and TypeScript, and Tailwind CSS for efficient styling. The site provides a potential user experience for a new digital banking platform. Its purpose is to provide a proof of concept for a sleek and intuitive financial service interface suitable for modern users. Includes a fully functioning blog platform, privacy policy and careers section.
+The EasyBank Demo POC is a modern, responsive banking website showcasing financial services with a clean user interface. Built with Vue 3 and TypeScript, and Tailwind CSS for efficient styling. The site provides a potential user experience for a new digital banking platform. Its purpose is to provide a proof of concept for a sleek and intuitive financial service interface suitable for modern users. Includes a fully functioning blog platform, privacy policy and careers section.
 
 <img width="1438" alt="Screenshot 2024-10-07 at 10 23 00 AM" src="https://github.com/user-attachments/assets/b6216532-4588-4d59-813f-a26dd2245885">
 ---
